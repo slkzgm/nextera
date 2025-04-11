@@ -1,8 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nextera
 
-## Getting Started
+A modern and elegant NextJS template with advanced theme management, pre-configured UI components, and optimized for rapid professional web application development.
 
-First, run the development server:
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Next.js](https://img.shields.io/badge/Next.js-15.3.0-black)
+![React](https://img.shields.io/badge/React-19.0.0-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.17-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+
+## 🚀 Features
+
+- **Next.js 15.3** - The latest version with optimized performance and TurboPack
+- **React 19** - Enjoy the latest React features
+- **TypeScript** - Static typing for more robust code
+- **TailwindCSS** - With advanced configuration and animations
+- **Theme Management** - Full support for light, dark, and dim themes
+- **UI Components** - Based on shadcn/ui for an elegant and consistent interface
+- **Sonner** - Stylish and accessible toast notifications
+- **ESLint & Prettier** - For clean and consistent code
+
+## 🛠️ Project Structure
+
+```
+.
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── globals.css           # Global styles with CSS variables for themes
+│   │   ├── layout.tsx            # Main application layout
+│   │   └── page.tsx              # Home page
+│   ├── components/
+│   │   ├── theme-provider.tsx    # Provider for theme management
+│   │   ├── theme-switcher.tsx    # Theme switching component
+│   │   └── ui/                   # Reusable UI components
+│   └── lib/
+│       └── utils.ts              # Utility functions
+├── .eslintrc.json
+├── .gitignore
+├── next.config.ts
+├── package.json
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
+```
+
+## 🌗 Themes
+
+This template includes advanced theme management with:
+
+- **Light** - Default light theme
+- **Dark** - Dark theme
+- **Dim** - Softened dark theme
+- **System** - Adapts to system preferences
+
+Themes are fully customizable via CSS variables in `globals.css`.
+
+## 🚀 Quick Start
+
+1. Clone this repo
+
+```bash
+git clone https://github.com/your-username/nextera.git my-project
+cd my-project
+```
+
+2. Install dependencies
+
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+```
+
+3. Start the development server
 
 ```bash
 npm run dev
@@ -10,27 +82,43 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `dev` - Starts the development server with TurboPack
+- `build` - Builds the application for production
+- `start` - Runs the application in production mode
+- `lint` - Checks the code with ESLint
+- `format` - Formats the code with Prettier
 
-## Learn More
+## 🧩 UI Components
 
-To learn more about Next.js, take a look at the following resources:
+This template uses [shadcn/ui](https://ui.shadcn.com/) components for an elegant and consistent user interface. You can easily add more components using the shadcn CLI:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx shadcn-ui@latest add [component]
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📱 Responsive Design
 
-## Deploy on Vercel
+All components are optimized for responsive design thanks to TailwindCSS.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛡️ TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project is fully configured with TypeScript for static typing and a better development experience.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
+- [Sonner](https://sonner.emilkowal.ski/)
