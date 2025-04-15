@@ -1,5 +1,5 @@
 {
-  "name": "nextera",
+  "name": "nextera-abstract",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -16,8 +16,11 @@
     "url": "https://github.com/slkzgm/nextera"
   },
   "dependencies": {
+    "@abstract-foundation/agw-client": "^1.6.2",
+    "@abstract-foundation/agw-react": "^1.6.4",
     "@radix-ui/react-dropdown-menu": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.0",
+    "@tanstack/react-query": "^5.74.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.487.0",
@@ -26,7 +29,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sonner": "^2.0.3",
-    "tailwind-merge": "^3.2.0"
+    "tailwind-merge": "^3.2.0",
+    "viem": "2.x",
+    "wagmi": "^2.14.16"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
