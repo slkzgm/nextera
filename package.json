@@ -16,8 +16,8 @@
     "url": "https://github.com/slkzgm/nextera"
   },
   "dependencies": {
-    "@abstract-foundation/agw-client": "^1.6.2",
-    "@abstract-foundation/agw-react": "^1.6.4",
+    "@abstract-foundation/agw-client": "^1.7.0",
+    "@abstract-foundation/agw-react": "^1.7.0",
     "@radix-ui/react-dropdown-menu": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.0",
     "@tanstack/react-query": "^5.74.3",
