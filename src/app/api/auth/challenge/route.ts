@@ -1,10 +1,10 @@
 // path: src/app/api/auth/challenge/route.ts
-/**
- * Proxies the GET /api/challenge?address=... request to the backend.
- */
 import { NextRequest } from 'next/server'
 import { proxyRequest } from '@/lib/proxy-request'
 
+/**
+ * Proxies GET /api/auth/challenge?address=... to the backend for signing challenges.
+ */
 export async function GET(req: NextRequest) {
   const url = new URL(req.url)
   const address = url.searchParams.get('address')

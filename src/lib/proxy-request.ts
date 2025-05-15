@@ -1,10 +1,9 @@
 // path: src/app/api/lib/proxy-request.ts
-/**
- * Provides a helper to proxy requests to the backend, forwarding cookies
- * and returning any Set-Cookie headers from the backend to the client.
- */
 import { NextRequest, NextResponse } from 'next/server'
 
+/**
+ * Proxies requests to the backend, forwarding cookies and returning any Set-Cookie headers.
+ */
 interface ProxyRequestOptions {
   backendPath: string
   method?: string
@@ -12,7 +11,7 @@ interface ProxyRequestOptions {
   headers?: Record<string, string>
 }
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3000'
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3000'
 
 export async function proxyRequest(
   req: NextRequest,

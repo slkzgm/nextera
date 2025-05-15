@@ -1,12 +1,11 @@
 // path: src/app/api/auth/login/route.ts
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/**
- * Proxies the POST /api/login call to the backend,
- * forwarding any cookies and returning Set-Cookie to the client.
- */
 import { NextRequest } from 'next/server'
 import { proxyRequest } from '@/lib/proxy-request'
 
+/**
+ * Proxies the POST /api/auth/login call to the backend,
+ * forwarding any cookies and returning the backend's Set-Cookie headers.
+ */
 export async function POST(req: NextRequest) {
   try {
     const { address, signature } = await req.json()
@@ -22,9 +21,10 @@ export async function POST(req: NextRequest) {
       method: 'POST',
       body: { address, signature },
     })
-  } catch (error: any) {
-    console.error('[ERROR] /api/auth/login =>', error.message)
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Internal server error'
+    console.error('[ERROR] /api/auth/login =>', message)
+    return new Response(JSON.stringify({ error: message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     })

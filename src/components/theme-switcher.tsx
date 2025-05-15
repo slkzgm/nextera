@@ -1,8 +1,8 @@
-// src/components/theme-switcher.tsx
+// path: src/components/theme-switcher.tsx
 'use client'
 
+import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
 import { Moon, Sun, Laptop, Sunset } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -12,11 +12,14 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
+/**
+ * A button for switching themes. Provides a dropdown with Light, Dark, Dim, and System modes.
+ */
 export default function ThemeSwitcher() {
   const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  // Avoid hydration mismatch
+  // Ensures no hydration mismatch for theme icons.
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -30,10 +33,9 @@ export default function ThemeSwitcher() {
     )
   }
 
-  // Helper function to get the current theme icon
+  // Returns the correct icon based on the current theme.
   const getThemeIcon = () => {
     const currentTheme = theme === 'system' ? resolvedTheme : theme
-
     if (currentTheme === 'dark') return <Moon className="h-5 w-5" />
     if (currentTheme === 'dim') return <Sunset className="h-5 w-5" />
     return <Sun className="h-5 w-5" />
