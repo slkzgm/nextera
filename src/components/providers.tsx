@@ -5,13 +5,13 @@ import { ThemeProvider } from '@/components/providers/theme-provider'
 import AbstractProvider from '@/components/providers/abstract-provider'
 
 interface ProvidersProps {
-    children: React.ReactNode
+  children: React.ReactNode
 }
 
 export function Providers({ children }: ProvidersProps) {
-    return (
-        <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
-            <AbstractProvider>{children}</AbstractProvider>
-        </ThemeProvider>
-    )
+  return (
+    <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
+      <AbstractProvider>{children}</AbstractProvider>
+    </ThemeProvider>
+  )
 }
