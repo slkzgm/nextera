@@ -19,7 +19,6 @@ export default function ThemeSwitcher() {
   const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  // Ensures no hydration mismatch for theme icons.
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -33,8 +32,7 @@ export default function ThemeSwitcher() {
     )
   }
 
-  // Returns the correct icon based on the current theme.
-  const getThemeIcon = () => {
+  function getThemeIcon() {
     const currentTheme = theme === 'system' ? resolvedTheme : theme
     if (currentTheme === 'dark') return <Moon className="h-5 w-5" />
     if (currentTheme === 'dim') return <Sunset className="h-5 w-5" />

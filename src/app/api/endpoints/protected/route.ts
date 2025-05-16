@@ -3,10 +3,8 @@ import { NextRequest } from 'next/server'
 import { proxyRequest } from '@/lib/proxy-request'
 
 /**
- * Proxies GET /api/protected to the backend, which checks for the JWT cookie.
+ * Forwards GET /api/protected to the backend /api/protected.
  */
 export async function GET(req: NextRequest) {
-  return proxyRequest(req, {
-    backendPath: '/api/protected',
-  })
+  return proxyRequest(req, { backendPath: '/api/protected' })
 }

@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server'
 import { proxyRequest } from '@/lib/proxy-request'
 
 /**
- * Proxies the POST /api/mint request to the backend's /api/actions/mint endpoint.
+ * Forwards POST /api/mint to the backend /api/actions/mint.
  */
 export async function POST(req: NextRequest) {
   try {

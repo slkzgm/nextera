@@ -3,8 +3,7 @@ import { NextRequest } from 'next/server'
 import { proxyRequest } from '@/lib/proxy-request'
 
 /**
- * Proxies the POST /api/auth/login call to the backend,
- * forwarding any cookies and returning the backend's Set-Cookie headers.
+ * Proxies POST /api/auth/login to the backend /api/login.
  */
 export async function POST(req: NextRequest) {
   try {
@@ -15,7 +14,6 @@ export async function POST(req: NextRequest) {
         headers: { 'Content-Type': 'application/json' },
       })
     }
-
     return proxyRequest(req, {
       backendPath: '/api/login',
       method: 'POST',

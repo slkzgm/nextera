@@ -3,10 +3,8 @@ import { NextRequest } from 'next/server'
 import { proxyRequest } from '@/lib/proxy-request'
 
 /**
- * Proxies GET /api/session/status to the backend for session status checks.
+ * Forwards GET /api/session/status to the backend /api/session/status.
  */
 export async function GET(req: NextRequest) {
-  return proxyRequest(req, {
-    backendPath: '/api/session/status',
-  })
+  return proxyRequest(req, { backendPath: '/api/session/status' })
 }

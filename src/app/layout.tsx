@@ -14,8 +14,7 @@ export const metadata: Metadata = {
 }
 
 /**
- * The root layout for the Next.js application.
- * Wraps all pages with shared providers and a global toaster.
+ * Root layout wrapping the entire Next.js application with shared providers.
  */
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

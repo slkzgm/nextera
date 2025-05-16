@@ -1,4 +1,4 @@
-// path: src/components/theme-provider.tsx
+// path: src/components/providers/theme-provider.tsx
 'use client'
 
 import * as React from 'react'
