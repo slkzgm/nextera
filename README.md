@@ -60,7 +60,7 @@ Themes are fully customizable via CSS variables in `globals.css`.
 1. Clone this repo
 
 ```bash
-git clone https://github.com/your-username/nextera.git my-project
+git clone https://github.com/slkzgm/nextera.git my-project
 cd my-project
 ```
 
