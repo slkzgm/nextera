@@ -2,7 +2,7 @@
 'use client'
 
 import { ThemeProvider } from '@/components/providers/theme-provider'
-import AbstractProvider from '@/components/providers/abstract-provider'
+import RainbowKitProviderWrapper from '@/components/providers/rainbowkit-provider'
 
 interface ProvidersProps {
     children: React.ReactNode
@@ -11,7 +11,7 @@ interface ProvidersProps {
 export function Providers({ children }: ProvidersProps) {
     return (
         <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
-            <AbstractProvider>{children}</AbstractProvider>
+            <RainbowKitProviderWrapper>{children}</RainbowKitProviderWrapper>
         </ThemeProvider>
     )
 }
